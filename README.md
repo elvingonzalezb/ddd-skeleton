@@ -1,11 +1,12 @@
 # DDD Skeleton
 
 **Version:** 1.0.0
+
 **Author:** Elvin Eduardo Gonzalez Bracho
 
 ## 🚀 Introduction
 
-`DDD Skeleton` is a CLI tool designed to dynamically generate a directory structure based on Domain-Driven Design (DDD) principles. It provides an easy way to bootstrap your projects with a robust and scalable architecture.
+DDD Skeleton is a CLI tool designed to dynamically generate a directory structure based on Domain-Driven Design (DDD) principles. It provides an easy way to bootstrap your projects with a robust and scalable architecture.
 
 With this tool, you can focus on development and avoid repetitive setup tasks.
 

@@ -1,10 +1,10 @@
 {
-  "name": "ddd-skeleton",
-  "version": "1.0.0",
+  "name": "structure-skeleton-ddd",
+  "version": "1.0.1",
   "description": "Librería para generar estructuras DDD dinámicas.",
   "main": "./lib/generator.js",
   "bin": {
-    "ddd-skeleton": "./bin/cli.js"
+    "ddd-skeleton": "bin/cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,12 +15,18 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/elvingonzalez/ddd-skeleton.git"
+    "url": "git+https://github.com/elvingonzalezb/ddd-skeleton.git"
   },
-    "engines": {
+  "engines": {
     "node": ">=14.0.0"
   },
-  "keywords": ["DDD", "skeleton", "dynamic-structure", "scaffolding", "nodejs"],
+  "keywords": [
+    "DDD",
+    "skeleton",
+    "dynamic-structure",
+    "scaffolding",
+    "nodejs"
+  ],
   "author": "Elvin Eduardo Gonzalez Bracho",
   "email": "elvin.gonzalez@pragma.com.co",
   "license": "ISC"

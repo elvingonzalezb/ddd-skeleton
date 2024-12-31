@@ -18,7 +18,7 @@ CLI para crear estructuras de carpetas en TypeScript basadas en el Diseño Impul
 
 1. Instala el generador globalmente:
    ```bash
-   npm install -g ddd-skeleton
+   npm install -g structure-skeleton-ddd
    ```
 
 2. Para obtener ayuda sobre los comandos disponibles:

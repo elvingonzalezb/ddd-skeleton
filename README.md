@@ -26,7 +26,7 @@ With this tool, you can focus on development and avoid repetitive setup tasks.
 Install `DDD Skeleton` globally using npm:
 
 ```bash
-npm install -g ddd-skeleton
+npm install -g structure-skeleton-ddd
 ```
 
 Generate a new project:

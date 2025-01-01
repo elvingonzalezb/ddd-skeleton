@@ -49,7 +49,7 @@ switch (command) {
     updateState({ projectCreated: true });
     break;
 
-  case "--create-context":
+  case "--create-context--notimplemented":
     if (!state.projectCreated) {
       console.log("Error: You must create a project first using --create-project.");
       break;
@@ -61,7 +61,7 @@ switch (command) {
     createContext(name);
     break;
 
-  case "--create-file":
+  case "--create-file--notimplemented":
     if (!state.projectCreated) {
       console.log("Error: You must create a project first using --create-project.");
       break;
@@ -78,5 +78,4 @@ switch (command) {
   default:
     console.log("Available commands:");
     console.log("ddd-skeleton --create-project --name=<name>");
-    console.log("ddd-skeleton --create-context --name=<name>");
 }

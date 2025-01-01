@@ -40,28 +40,34 @@ ddd-skeleton --create-project --name=<name>
 The generated project will have a structure like this:
 
 ```
-src/
-├── contexts/
-│   ├── template/
-│   │   ├── application/
-│   │   │   ├── DTO/
-│   │   │   ├── usecases/
-│   ├── config/
-│   ├── domain/
-│   ├── infrastructure/
-│   ├── presentation/
-│   └── utils/
-├── shared/
-│   ├── enums/
-│   ├── interfaces/
-│   ├── mappers/
-│   ├── responses/
-│   ├── types/
-│   ├── utils/
-│   └── services/
-└── ApplicationCore.ts
-└── ControllerDependencyInjector.ts
-└── main.ts
+nameproject/
+├── src/
+│   ├── contexts/
+│   │   ├── user/
+│   │   │   ├── application/
+│   │   │   │   ├── DTO/
+│   │   │   │   ├── usecases/
+│   │   │   ├── config/
+│   │   │   ├── domain/
+│   │   │   ├── infrastructure/
+│   │   │   ├── presentation/
+│   │   │   └── utils/
+│   ├── shared/
+│   │   ├── enums/
+│   │   ├── interfaces/
+│   │   ├── mappers/
+│   │   ├── responses/
+│   │   ├── types/
+│   │   ├── utils/
+│   │   └── services/
+│   └── ApplicationCore.ts
+│   └── ControllerDependencyInjector.ts
+│   └── main.ts
+├── test/
+├── .env
+├── package.json
+├── README.md
+├── tsconfig.json
 ```
 
 ---

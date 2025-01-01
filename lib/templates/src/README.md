@@ -25,90 +25,8 @@ CLI para crear estructuras de carpetas en TypeScript basadas en el Diseño Impul
    ```bash
    ddd-skeleton --help
    ```
-
 ---
 
-## 📂 Estructura de Archivos y Carpetas
-
-El generador crea una estructura predeterminada siguiendo el modelo de Diseño Impulsado por Dominios (DDD), permitiendo una mejor organización y escalabilidad del proyecto. La estructura es la siguiente:
-
-```
-src/
-├── contexts/
-│   ├── template/
-│   │   ├── application/
-│   │   │   └── DTO/
-│   │   │       ├── TemplateDTO.ts
-│   │   │   └── usecases/
-│   │   │       ├── TemplateCreateUseCase.ts
-│   │   │       ├── TemplateFindUseCase.ts
-│   │   │       ├── TemplateUpdateUseCase.ts
-│   │   │       └── TemplateDeleteUseCase.ts
-│   │   ├── config/
-│   │   │   ├── databaseConfig,ts/
-│   │   ├── domain/
-│   │   │   ├── entities/
-│   │   │   │   └── Template.ts
-│   │   │   ├── repositories/
-│   │   │   │   └── IDatabaseDriver.ts
-│   │   │   │   └── IDatabaseRepository.ts
-│   │   │   │   └── IUseCases.ts
-│   │   │   ├── services/
-│   │   │   │   └── TemplateService.ts
-│   │   │   ├── valueObjects/
-│   │   │   │   └── TemplateId.ts
-│   │   ├── infrastructure/
-│   │   │   ├── factories/
-│   │   │   │   └── DatabaseConnectionFactory.ts
-│   │   │   │   └── RepositoryFactory.ts
-│   │   │   ├── repositories/
-│   │   │   │   └── MemoryRepository.ts
-│   │   │   │   └── MongoDBRepository.ts
-│   │   │   │   └── PostgresRepository.ts
-│   │   │   ├── persistence/
-│   │   │   │   └── DatabaseConnection.ts
-│   │   │   │   └── LocalStore.ts
-│   │   │   │   └── MongoDBConnection.ts
-│   │   │   │   └── PostgresConnection.ts
-│   │   ├── presentation/
-│   │   │   ├── http/
-│   │   │   │   └── TemplateController.ts
-│   │   │   ├── validators/
-│   │   │   │   └── TemplateValidator.ts
-│   │   └── utils/
-│   │       ├── prepareDataDriverMemory.ts/
-│   │       ├── prepareDataDriverMongodb.ts/
-│   │       ├── prepareDataDriverPostgres.ts/
-├── shared/
-│   ├── enums/
-│   │   └── General.ts
-│   │   └── Responses.ts
-│   ├── interfaces/
-│   │   └── IMapper.ts
-│   │   └── Responses.ts
-│   ├── mappers/
-│   │   └── MapToHttpResponse.ts
-│   ├── responses/
-│   │   └── BadRequestResponse.ts
-│   │   └── InternalErrorResponse.ts
-│   │   └── ResourceNotFoundResponse.ts
-│   ├── types/
-│   │   └── CommonType.ts
-│   │   └── ValidationError.ts
-│   ├── utils/
-│   │   └── Either.ts
-│   │   └── HandleError.ts
-│   ├── validators/
-│   │   └── Validator.ts
-│   └── services/
-│       └── EmailNotificationService.ts
-│       └── INotificationService.ts
-└── ApplicationCore.ts
-└── ControllerDependencyInjector.ts
-└── main.ts
-```
-
----
 ## 🔠 Comandos Disponibles
 
 ### Crear un Proyecto Inicial
@@ -119,18 +37,98 @@ ddd-skeleton --create-project --name=<name>
 ddd-skeleton --create-project --name=user
 ```
 ---
+
 ### Instalar Dependencias, Compilar y Ejecutar
 Después de crear un proyecto, puedes instalar las dependencias, compilar y ejecutar el proyecto con:
 ```bash
+cd <nameproject>
+# Ejemplo:
+cd user
 npm i && npm run build && npm start
 ```
 
-### Crear un Contexto
-Este comando permite crear un nuevo contexto dentro del proyecto:
-```bash
-ddd-skeleton --create-context --name=<context>
-# Ejemplo:
-ddd-skeleton --create-context --name=auth
+## 📂 Estructura de Archivos y Carpetas
+
+El generador crea una estructura predeterminada siguiendo el modelo de Diseño Impulsado por Dominios (DDD), permitiendo una mejor organización y escalabilidad del proyecto. La estructura es la siguiente:
+
+```
+user/
+├── src/
+│   ├── contexts/
+│   │   ├── user/
+│   │   │   ├── application/
+│   │   │   │   └── DTO/
+│   │   │   │       ├── UserDTO.ts
+│   │   │   │   └── usecases/
+│   │   │   │       ├── UserCreateUseCase.ts
+│   │   │   │       ├── UserFindUseCase.ts
+│   │   │   │       ├── UserUpdateUseCase.ts
+│   │   │   │       └── UserDeleteUseCase.ts
+│   │   │   ├── config/
+│   │   │   │   ├── databaseConfig.ts
+│   │   │   ├── domain/
+│   │   │   │   ├── entities/
+│   │   │   │   │   └── User.ts
+│   │   │   │   ├── repositories/
+│   │   │   │   │   └── IDatabaseDriver.ts
+│   │   │   │   │   └── IDatabaseRepository.ts
+│   │   │   │   │   └── IUseCases.ts
+│   │   │   │   ├── services/
+│   │   │   │   │   └── UserService.ts
+│   │   │   │   ├── valueObjects/
+│   │   │   │   │   └── UserId.ts
+│   │   │   ├── infrastructure/
+│   │   │   │   ├── factories/
+│   │   │   │   │   └── DatabaseConnectionFactory.ts
+│   │   │   │   │   └── RepositoryFactory.ts
+│   │   │   │   ├── repositories/
+│   │   │   │   │   └── MemoryRepository.ts
+│   │   │   │   │   └── MongoDBRepository.ts
+│   │   │   │   │   └── PostgresRepository.ts
+│   │   │   │   ├── persistence/
+│   │   │   │   │   └── DatabaseConnection.ts
+│   │   │   │   │   └── LocalStore.ts
+│   │   │   │   │   └── MongoDBConnection.ts
+│   │   │   │   │   └── PostgresConnection.ts
+│   │   │   ├── presentation/
+│   │   │   │   ├── http/
+│   │   │   │   │   └── UserController.ts
+│   │   │   │   ├── validators/
+│   │   │   │   │   └── UserValidator.ts
+│   │   │   ├── utils/
+│   │   │       ├── prepareDataDriverMemory.ts
+│   │   │       ├── prepareDataDriverMongodb.ts
+│   │   │       ├── prepareDataDriverPostgres.ts
+│   ├── shared/
+│   │   ├── enums/
+│   │   │   └── General.ts
+│   │   │   └── Responses.ts
+│   │   ├── interfaces/
+│   │   │   └── IMapper.ts
+│   │   │   └── Responses.ts
+│   │   ├── mappers/
+│   │   │   └── MapToHttpResponse.ts
+│   │   ├── responses/
+│   │   │   └── BadRequestResponse.ts
+│   │   │   └── InternalErrorResponse.ts
+│   │   │   └── ResourceNotFoundResponse.ts
+│   │   ├── types/
+│   │   │   └── CommonType.ts
+│   │   │   └── ValidationError.ts
+│   │   ├── utils/
+│   │   │   └── Either.ts
+│   │   │   └── HandleError.ts
+│   │   ├── validators/
+│   │   │   └── Validator.ts
+│   │   └── services/
+│   │       └── EmailNotificationService.ts
+│   │       └── INotificationService.ts
+├── test/
+├── .env
+├── package.json
+├── README.md
+├── tsconfig.json
+└── main.ts
 ```
 
 ---

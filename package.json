@@ -1,6 +1,6 @@
 {
   "name": "structure-skeleton-ddd",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Librería para generar estructuras DDD dinámicas. Instálalo globalmente usando: npm install -g structure-skeleton-ddd",
   "main": "./lib/generator.js",
   "bin": {

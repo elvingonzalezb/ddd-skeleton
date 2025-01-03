@@ -5,7 +5,7 @@ import { ValidationResult } from "../../../shared/types/ValidationError";
  * Class represents a entity with an ID, name, and status.
  * This class also includes methods to get/set properties and validate business rules.
  */
-export class Template {
+export class User {
   // Table name where the entity data would be stored, it can be customized later
   protected readonly tableName: string = "change_me";
 
